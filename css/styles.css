@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    width: 100%;
+    height: 110vh;
+    background-color: hsl(0, 100%, 74%) ;
+    
+    
+}
+body::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-image: url('../img/bg-intro-desktop.png');
+    animation: movement 4s linear infinite;
+}
+
+
+@keyframes movement {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 10%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+
+
+#left{
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+#title{
+    
+    position: relative;
+    left: 15rem;
+    top: 1rem;
+    font-size: 4.5rem;
+    font-weight: bolder;
+    line-height:6rem;
+}
+
+#text{
+    position: relative;
+    top: 4rem;
+    left: 15rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#banner{
+    position: relative;
+    top: 4.5rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem ;
+    width: 50rem;
+    height: 6rem;
+    color: white;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 1rem;
+    box-shadow: 0px 8px 2px 0px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0px 8px 2px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 8px 2px 0px rgba(0,0,0,0.23);
+}
+
+form{
+    position: relative;
+    bottom: 3rem;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50rem;
+    height: 45rem;
+    box-shadow: 0px 8px 2px 0px rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0px 8px 2px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 8px 2px 0px rgba(0,0,0,0.19);
+}
+
+form p{
+    color: hsl(246, 25%, 77%) ;
+    font-size: x-small;
+}
+
+form p strong{
+
+    color: hsl(0, 100%, 74%) ;
+}
+
+
+.input{
+    
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 43rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    border-color: hsl(246, 25%, 77%);
+    top: 2rem;
+}
+
+#button{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    background-color: hsl(154, 59%, 51%);
+    border: 0;
+    box-shadow: 0px -4px 2px 0px rgba(0,0,0,0.23) inset;
+    -webkit-box-shadow: 0px -4px 2px 0px rgba(0,0,0,0.23) inset;
+    -moz-box-shadow: 0px -4px 2px 0px rgba(0,0,0,0.23) inset;
+}
+
+
+@media screen and (max-width: 375px) {
+    
+    body{
+    flex-direction: column;
+    align-items: center;
+    height: 100rem;
+    }
+
+    #left {
+        width: 100%;
+        height: 30%;
+    }
+
+    #title {
+        
+        left: 0rem;
+        top: 0rem;
+        font-size: 2.4rem;
+        font-weight: bolder;
+        line-height: 4rem;
+        text-align: center;
+    }
+
+    #text {
+        
+        top: 2rem;
+        left: 0rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    #right{
+        height: 58%;
+    }
+
+    #banner{
+    top:0rem;
+    height: 8rem;
+    width: 32rem;
+    }
+
+    #banner p{
+        width: 17.3rem;
+        text-align: center;
+    }
+    form{
+        width: 32rem;
+        bottom: 0rem;
+    }
+
+    form p{
+        width: 27rem;
+        text-align: center;
+    }
+
+    .input{
+        width: 27rem;
+    }
+}
+
+
