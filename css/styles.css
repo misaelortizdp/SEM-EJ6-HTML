@@ -119,7 +119,6 @@ form p strong{
 
 
 .input{
-    
     position: relative;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
@@ -143,7 +142,25 @@ form p strong{
 }
 
 
-@media screen and (max-width: 375px) {
+.pass{
+    border: 2px solid green;
+    color: green;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.error{
+    border: 2px solid hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+    font-size: larger;
+    font-weight: bold;
+    background-image: url('../img/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 38rem;
+}
+
+@media screen and (max-width: 420px) {
     
     body{
     flex-direction: column;
@@ -203,5 +220,7 @@ form p strong{
         width: 27rem;
     }
 }
+
+
 
 
