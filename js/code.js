@@ -12,6 +12,6 @@ arrayInputs.forEach((input) =>{
 function validateForm({ target }){
   expReg[`${target.name}`].test(target.value)
   ? (target.classList.add('pass'), target.classList.remove('error'))
-  : (target.classList.remove('pass'), target.classList.add('error'), document.querySelector('#'+target.name).insertAdjacentHTML('afterend', '<p>'+target.name+' cannot be empty</p>'))
+  : (target.classList.remove('pass'), target.classList.add('error'))//, document.querySelector('#'+target.name).insertAdjacentHTML('afterend', '<p>'+target.name+' cannot be empty</p>'))
 
 }
