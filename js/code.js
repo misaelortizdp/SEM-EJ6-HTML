@@ -11,6 +11,7 @@ arrayInputs.forEach((input) =>{
 });
 function validateForm({ target }){
   expReg[`${target.name}`].test(target.value)
-  ? target.style.border = "2px solid green" 
-  : target.style.border = "2px solid red" 
+  ? (target.classList.add('pass'), target.classList.remove('error'))
+  : (target.classList.remove('pass'), target.classList.add('error'), document.querySelector('#'+target.name).insertAdjacentHTML('afterend', '<p>'+target.name+' cannot be empty</p>'))
+
 }
